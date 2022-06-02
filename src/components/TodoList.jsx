@@ -7,7 +7,7 @@ const TodoList = () => {
     return (
         <div className=''>
             {
-                todos.map((element, index) => <Todo item={element} key={index}/>)
+                todos.map((element, index) => <Todo item={element} key={element.id}/>)
             }
         </div>
     )

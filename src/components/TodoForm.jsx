@@ -20,7 +20,7 @@ const TodoForm = () => {
     }
     
     return (
-        <div className='border-8 border-blue-800 w-full'>
+        <div className=''>
             <form onSubmit={handleClick}>
                 <input type="text" name="text" placeholder='Input a todo' value={input} onChange={hanldeChange}/>
                 <button className='font-bold bg-blue-900' type='submit'>Add</button>

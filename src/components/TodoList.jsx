@@ -1,30 +1,16 @@
 import React from 'react'
 import Todo from './Todo'
-
-const data = [
-    {
-        id: 1,
-        name: 'ReactJs'
-    },
-    {
-        id: 2,
-        name: 'VueJs'
-    },
-    {
-        id: 3,
-        name: 'AngularJs'
-    }
-]
+import { useSelector } from 'react-redux'
 
 const TodoList = () => {
-  return (
-    <div className=''>
-        <h2>Todo List</h2>
-        {
-            data.map((element, index) => <Todo item={element} />)
-        }
-    </div>
-  )
+    const todos = useSelector((state)=>state.todos)
+    return (
+        <div className=''>
+            {
+                todos.map((element, index) => <Todo item={element} key={index}/>)
+            }
+        </div>
+    )
 }
 
 export default TodoList
